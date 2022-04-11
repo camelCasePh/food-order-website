@@ -49,13 +49,13 @@ a:hover{
     border-radius: 5px;
 }
 .btn-primary{
-    background-color: #ff6b81;
+    background-color: #09C9FC;
     color: white;
     cursor: pointer;
 }
 .btn-primary:hover{
     color: white;
-    background-color: #ff4757;
+    background-color: #099BFC;
 }
 h2{
     color: #2f3542;
@@ -104,7 +104,7 @@ fieldset{
 /* CSS for Food SEarch Section */
 
 .food-search{
-    background-image: url(../images/bg.jpg);
+    background-image: url(../images/bgnew.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
