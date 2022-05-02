@@ -47,8 +47,13 @@ ul li a:hover{
     padding: 3%;
     float: left;
 }
+/*css for manage-admin*/s
+
 /*css for footer*/
 .footer{
     background-color: #7F0FF6;
    color: white;
+}
+.footer .wrapper p a{
+    color: white;
 }
