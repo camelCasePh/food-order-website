@@ -47,8 +47,70 @@ ul li a:hover{
     padding: 3%;
     float: left;
 }
-/*css for manage-admin*/s
+/*css for manage-admin*/
+.tbl-full{
+    width: 100%;
+  
+}
+table tr th{
+    border-bottom: 1px solid #7F0FF6 ;
+    padding: 1%;
+    text-align: left;
+}
+table tr td{
+    padding: 1%;
+}
+.btn-primary{
+    padding: 1%;
+    color: white;
+    background-color:#8e44ad;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    
 
+}
+.btn-primary:hover{
+    background-color: #490E63;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+.btn-secondary{
+    padding: 1.5%;
+    color: white;
+    background-color:#2ecc71;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: small;
+
+    
+
+}
+.btn-secondary:hover{
+    background-color: #27ae60;
+    border-radius: 5px;
+
+    
+}
+
+.btn-danger{
+    padding: 1.5%;
+    color: white;
+    background-color:#e74c3c;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: small;
+
+    
+
+}
+.btn-danger:hover{
+    background-color: #c0392b;
+    border-radius: 5px;
+
+    
+}
 /*css for footer*/
 .footer{
     background-color: #7F0FF6;
