@@ -5,7 +5,15 @@
             <div class="wrapper">
                     <h1>Manage admin</h1>
                     <!-- Button to add Admin-->
-                        <br>
+                    <?php 
+
+                       if(isset($_SESSION['add'])){
+                            echo $_SESSION['add']; //Displaying session message
+                            unset($_SESSION['add']); //Removing session message
+                    }
+
+                    ?>
+                        <br><br><br>
                        <a href="add-admin.php" class="btn-primary">Add Admin</a>
                     
                        <br> <br>
@@ -16,43 +24,56 @@
                             <th>Username</th>
                             <th>Actions</th>
                         </tr>
-                        <tr>
-                            <td>1.</td>
-                            <td>Bryan Ladion</td>
-                            <td>Kikitiw</td>
-                            <td>
-                            <a href="#" class="btn-secondary">Update Admin</a>
-                            <a href="#" class="btn-danger">Delete Admin</a>
-                    
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2.</td>
-                            <td>Harris Revs</td>
-                            <td>Kikitiw</td>
-                            <td>
-                            <a href="#" class="btn-secondary">Update Admin</a>
-                            <a href="#" class="btn-danger">Delete Admin</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>3.</td>
-                            <td>Pabs Kie</td>
-                            <td>Kikitiw</td>
-                            <td>
-                            <a href="#" class="btn-secondary">Update Admin</a>
-                            <a href="#" class="btn-danger">Delete Admin</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>4.</td>
-                            <td>Flor d' elis</td>
-                            <td>Kikitiw</td>
-                            <td>
-                            <a href="#" class="btn-secondary">Update Admin</a>
-                            <a href="#" class="btn-danger">Delete Admin</a>
-                            </td>
-                        </tr>
+
+                        <?php 
+                            //Query to get all admin
+                            $sql = "SELECT * FROM tbl_admin";
+                            //Execute the query
+                             $res = mysqli_query($conn, $sql);
+
+                             //check whether the query is executed or not
+                             if($res == TRUE){
+                                
+                                //count rows whether we have data in database or not
+                                $count = mysqli_num_rows($res);
+
+                                $sn=1;
+                                
+                                //check the number of rows
+                                if($count>0){
+                                        // we have data in rows
+                                    
+                                        while($rows=mysqli_fetch_assoc($res)){
+                                            //using while loop to get all the data from the database
+                                            //while loop will run as long as we have data in the database
+
+                                            //get individual data
+                                            $id=$rows['id'];
+                                            $full_name=$rows['full_name'];
+                                            $username=$rows['username'];
+                                        
+                                            //Display the values in our table
+
+                                            ?>
+                                                    <tr>
+                                                        <td><?php echo $sn++; ?></td>
+                                                        <td><?php echo $full_name; ?></td>
+                                                        <td><?php echo $username; ?></td>
+                                                        <td>
+                                                            <a href="#" class="btn-secondary">Update Admin</a>
+                                                            <a href="#" class="btn-danger">Delete Admin</a>
+                                                        </td>
+                                                    </tr>
+                                            <?php
+                                        }
+                                }else{
+                                    //we dont have data in rows
+                                    echo " we dont have data in rows";
+
+                                }
+                             }
+                        ?>
+                       
                     </table>
     
             </div>
