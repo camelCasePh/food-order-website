@@ -16,7 +16,16 @@
     float: none;
     clear: both;
 }
+.success{
+    color: #2ecc71;
+    font-weight: bolder;
+}
+.failed{
+    color: #e74c3c;
+    font-weight: bolder;
+}
 /*css for menu*/
+
 .menu{
     background-color: #490E63;
 }
