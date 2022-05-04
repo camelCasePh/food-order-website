@@ -15,6 +15,10 @@
                 echo $_SESSION['login-failed'];
                 unset($_SESSION['login-failed']);
             }
+             if(isset($_SESSION['user-not-logged-in'])){
+                echo $_SESSION['user-not-logged-in'];
+                unset($_SESSION['user-not-logged-in']);
+            }
             ?>
             <br>
 
@@ -63,6 +67,7 @@
         
                   if($count==1){
                   
+                       $_SESSION['admin-user']=$username; //this session variable will be used in menu page to check whether the user is log in or not   
                        header('location:'.SITE_URL.'admin/index.php');
                     }
                     

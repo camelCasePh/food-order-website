@@ -45,6 +45,12 @@ ul li a:hover{
     font-size: large;
     font-weight: bold;
     color: whitesmoke;
+    background-color: #9b59b6;
+}
+#logout-btn{
+    background-color: white;
+    color: black;
+    border-radius: 3px;
 }
 /*css for main content*/
 .main-content{

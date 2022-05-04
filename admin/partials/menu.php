@@ -1,5 +1,5 @@
 <?php include('../config/constants.php')?>
-
+<?php include('partials/login-check.php')?>
 <html>
     <head>
         
@@ -11,13 +11,15 @@
            <div class="wrapper">
            <ul>
                 <li>
-                    <a href="index.php">Home</a>
+                    <a id="home-btn" href="index.php">Home</a>
                     <a href="manage-admin.php">Admin</a>
                     <a href="manage-category.php">Category</a>
                     <a href="manage-food.php">Food</a>
                     <a href="manage-order.php">Order</a>
+                     <a id="logout-btn" href="logout.php">Logout</a>
                 </li>
             </ul>
             </div>
+
 
         </div>
