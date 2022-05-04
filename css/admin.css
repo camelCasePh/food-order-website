@@ -28,6 +28,7 @@
 
 .menu{
     background-color: #490E63;
+
 }
 ul li{
     text-align: right;
@@ -137,6 +138,46 @@ table tr td{
     border-radius: 10px;
     padding: 5%;
 }
+.login-background{
+    background-color: #490E63;
+    padding:1%;
+}
+.login{
+    width: 50%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5%;
+    margin:3% auto;
+
+}
+.login h1{
+    font-size: 50px;
+}
+.login-form-label{
+    font-weight: bold;
+}
+
+.login-footer{
+    color: black;
+    font-weight: bold;
+}
+.login-footer a{
+    text-decoration: none;
+    color: blue;
+    font-size: medium;
+    font-weight: bold;
+}
+.login form input{
+    background-color: #9b59b6;
+    height: 6%;
+    font-weight: bold;
+    color: white;
+}
+.login .login-button {
+    padding: 1%;
+    width: 20%;
+}
+
 .tbl-30{
     width: 50%;
 }
@@ -152,6 +193,11 @@ table tr td{
     font-weight: bold;
     size: small;
 }
+
+.admin-table-data{
+    font-weight: bold;
+}
+
 /*css for footer*/
 .footer{
     background-color: #7F0FF6;

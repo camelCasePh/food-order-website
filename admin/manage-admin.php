@@ -78,9 +78,9 @@
 
                                             ?>
                                                     <tr>
-                                                        <td><?php echo $sn++; ?></td>
-                                                        <td><?php echo $full_name; ?></td>
-                                                        <td><?php echo $username; ?></td>
+                                                        <td><?php echo$sn++;?></td>
+                                                        <td><?php echo"<div class='admin-table-data'> $full_name</div>"; ?></td>
+                                                        <td><?php echo"<div class='admin-table-data'> $username</div>"; ?></td>
                                                         <td>
                                                             <a href="<?php echo SITE_URL;?>admin/update-password.php ? id=<?php echo $id;?>" class="btn-change-password">Change password</a>
                                                             <a href="<?php echo SITE_URL;?>admin/update-admin.php ? id=<?php echo $id;?>" class="btn-secondary">Update Admin</a>
