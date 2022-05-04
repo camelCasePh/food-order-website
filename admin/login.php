@@ -55,7 +55,6 @@
         //  1. get the data from the log in form
         $username = $_POST['username'];
         $password = md5($_POST['password']);
-
         //2. SQL to check the whether the username and password exist
         $sql = "SELECT * FROM tbl_admin WHERE username='$username' AND password='$password'";
         //3. Execute the Query 

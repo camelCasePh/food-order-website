@@ -5,7 +5,7 @@
             <div class="wrapper">
                     <h1>Manage Categories</h1>
                     <br>
-                    <a href="add-admin.php" class="btn-primary">Add Category</a>
+                    <a href="<?php echo SITE_URL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
                     <br><br>
     
             </div>

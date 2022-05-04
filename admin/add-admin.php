@@ -27,9 +27,11 @@
                         <td>PASSWORD:</td>
                         <td><input type="password" name="password" placeholder="Your Password">  </td>
                     </tr>
+                    
                     <tr>
+                      
                         <td colspan="2">
-                            <input type="submit" name="submit" value="Add Admin" class="btn-primary">
+                            <input type="submit" name="submit" value="Add Admin" class="btn-admin">
                         </td>
                     </tr>
                     
