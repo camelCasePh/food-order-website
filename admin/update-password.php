@@ -18,19 +18,19 @@
                 <tr>
                     <td>Current Password:</td>
                     <td>
-                        <input type="password" name="current_password" placeholder="Old Password">
+                        <input type="password" name="current_password" placeholder="Old Password" required>
                     </td>
                 </tr>
                 <tr>
                     <td>New Password:</td>
                     <td>
-                        <input type="password" name="new_password" placeholder="New Password">
+                        <input type="password" name="new_password" placeholder="New Password" required>
                     </td>
                 </tr>
                 <tr>
                     <td>Confirm Password:</td>
                     <td>
-                        <input type="password" name="confirm_password" placeholder="Confirm Password">
+                        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
                     </td>
                 </tr>
                 <tr>

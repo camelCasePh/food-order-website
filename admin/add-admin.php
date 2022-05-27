@@ -6,9 +6,9 @@
       <h1>ADD ADMIN</h1>
           <?php 
 
-                       if(isset($_SESSION['add'])){
-                            echo $_SESSION['add']; //Displaying session message
-                            unset($_SESSION['add']); //Removing session message
+                       if(isset($_SESSION['add-admin-message'])){
+                            echo $_SESSION['add-admin-message']; //Displaying session message
+                            unset($_SESSION['add-admin-message']); //Removing session message
                     }
 
                     ?>
@@ -17,15 +17,15 @@
                 <table class="tbl-30">
                     <tr>
                         <td>FULL NAME:</td>
-                        <td><input type="text" name="full_name" placeholder="Enter Your Name"></td>
+                        <td><input type="text" name="full_name" placeholder="Enter Your Name" required></td>
                     </tr>
                     <tr>
                         <td>USERNAME:</td>
-                        <td><input type="text"  name="username" placeholder="Your Username">  </td>
+                        <td><input type="text"  name="username" placeholder="Your Username" required>  </td>
                     </tr>
                     <tr>
                         <td>PASSWORD:</td>
-                        <td><input type="password" name="password" placeholder="Your Password">  </td>
+                        <td><input type="password" name="password" placeholder="Your Password" required>  </td>
                     </tr>
                     
                     <tr>
@@ -72,7 +72,7 @@
             
             //data is inserted
             //create a session variable to display a message
-            $_SESSION['add'] = "<div class='success'> Added successfully</div>";
+            $_SESSION['add-admin-message'] = "<div class='success'> Added successfully</div>";
             
                
             //Redirect page to manage admin page
@@ -83,7 +83,7 @@
             //failed to insert data
 
               //create a session variable to display a message
-            $_SESSION['add'] = "<div class='failed'> Failed to Add Admin</div>";
+            $_SESSION['add-admin-message'] = "<div class='failed'> Failed to Add Admin</div>";
                
             //Redirect page to add admin page
             header("location:".SITE_URL.'admin/add-admin.php');

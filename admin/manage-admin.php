@@ -7,9 +7,9 @@
                     <!-- Button to add Admin-->
                     <?php 
 
-                       if(isset($_SESSION['add'])){
-                            echo $_SESSION['add']; //Displaying session message
-                            unset($_SESSION['add']); //Removing session message
+                       if(isset($_SESSION['add-admin-message'])){
+                            echo $_SESSION['add-admin-message']; //Displaying session message
+                            unset($_SESSION['add-admin-message']); //Removing session message
                     }
 
                         if(isset($_SESSION['delete'])){

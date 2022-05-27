@@ -3,12 +3,16 @@
     <head>
          <title>Log in - Harris Food</title>
          <link rel="stylesheet" href="../css/admin.css">
-
-    </head>
+         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
+</head>
     <body class="login-background">
 
         <div class="login">
-            <h1 class=" text-align-center">Login</h1>
+            <br>
+            <h1 class=" text-align-center">Admin Panel</h1>
             <br> 
             <?php
             if(isset($_SESSION['login-failed'])){
@@ -20,26 +24,26 @@
                 unset($_SESSION['user-not-logged-in']);
             }
             ?>
-            <br>
-
           
-
             <!-- login form start here-->
-                <form action="" method="POST" class="text-align-center login-form-label">
-                    Username:
-                    <br><br>
-                    <input type="text" name="username" placeholder="">
-                    <br><br>
-                    Password:
-                    <br><br>
-                    <input type="password" name="password" placeholder="">
-                    <br><br>
+                <form action="" method="POST">
+                    <div class="login-form-label"> Username</div>
+                   <div class="text-align-center">
+                   <input type="text" name="username" placeholder="" required >
+                   </div>
+                    <div class="login-form-label"> Password</div> 
+                   <div class="text-align-center"><input type="password" name="password" placeholder="" required></div>
+                    <br>
+                    <div class="text-align-center">
                     <input type="submit" name="submit" value="Login" class="login-button btn-primary">
-                </form>
-                <br><br><br>
-            <!--Login form ends here-->
 
+                    </div>
+                </form>
+             <br><br>
+            <!--Login form ends here-->
+            <br>
             <p class="login-footer text-align-center ">Created by - <a href="https://www.facebook.com/HHB-Team-107144751990798" target="blank">HHB Team</a></p>
+                
         </div>
 
 
@@ -54,7 +58,8 @@
         //process for log in
         //  1. get the data from the log in form
         $username = $_POST['username'];
-        $password = md5($_POST['password']);
+     $password = md5($_POST['password']);
+    
         //2. SQL to check the whether the username and password exist
         $sql = "SELECT * FROM tbl_admin WHERE username='$username' AND password='$password'";
         //3. Execute the Query 

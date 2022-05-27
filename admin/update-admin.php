@@ -47,13 +47,13 @@
                 <tr>
                     <td>Full Name:</td>
                     <td>
-                        <input type="text" name="full_name" value="<?php echo $full_name?>">
+                        <input type="text" name="full_name" value="<?php echo $full_name?>"required>
                     </td>
                 </tr>
                 <tr>
                     <td>Username:</td>
                     <td>
-                        <input type="text" name="username" value="<?php echo $username?>">
+                        <input type="text" name="username" value="<?php echo $username?>"required>
                     </td>
                 </tr>
               
