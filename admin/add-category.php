@@ -29,7 +29,7 @@
                     <tr>
                         <td>Upload Image:</td>
                         <td>
-                            <input type="file" name="image">
+                            <input type="file" name="image" required>
                         </td>
                     </tr>
                     <tr>
