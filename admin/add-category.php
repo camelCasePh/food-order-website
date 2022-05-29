@@ -116,6 +116,7 @@
             //upload the image
             $image_name=$_FILES['image']['name'];
 
+                    if($image_name !=""){
             // Auto rename image
             //get file extension (png, jpg, gif, etc.)
             $ext = end(explode('.',$image_name));
@@ -133,7 +134,9 @@
                        //stop the process 
                         die();
                  }
-        }else{
+                }
+        }
+        else{
             $image_name = "";
         }
 

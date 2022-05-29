@@ -9,6 +9,22 @@
              echo $_SESSION['add-category-message'];
              unset($_SESSION['add-category-message']);   
         }
+        if(isset($_SESSION['delete-category'])){
+            echo $_SESSION['delete-category'];
+            unset($_SESSION['delete-category']);   
+       }
+       if(isset($_SESSION['delete-category-image'])){
+        echo $_SESSION['delete-category-image'];
+        unset($_SESSION['delete-category-image']);   
+   }
+   if(isset($_SESSION['update-category'])){
+    echo $_SESSION['update-category'];
+    unset($_SESSION['update-category']);   
+}
+if(isset($_SESSION['failed-to-remove'])){
+    echo $_SESSION['failed-to-remove'];
+    unset($_SESSION['failed-to-remove']);   
+}
         ?><br>
                     <a href="<?php echo SITE_URL; ?>admin/add-category.php" class="btn-primary">Add Category</a>
                     <br> <br>
@@ -62,8 +78,8 @@
                                     <td><?php echo $featured; ?></td>
                                     <td><?php echo $active; ?></td>
                                     <td>
-                                    <a href="#" class="btn-secondary">Update Category</a>
-                                    <a href="#" class="btn-danger">Delete Category</a>
+                                    <a href="<?php echo SITE_URL;?>admin/update-category.php? id=<?php echo $id;?>" class="btn-secondary-category" >Update Category</a>
+                                    <a href=" <?php echo SITE_URL;?>admin/delete-category.php? id=<?php echo $id;?>&image_name=<?php echo $image_name;?> " class="btn-danger-category">Delete Category</a>
                                     </td>
                                     
                                     <?php
