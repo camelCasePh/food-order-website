@@ -4,6 +4,10 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+h1{
+    font-family: 'Righteous', cursive;
+    color: #8e44ad;
+}
 .wrapper{
     width: 80%;
     margin: 0 auto;
@@ -28,6 +32,7 @@
 
 .menu{
     background-color: #490E63;
+
 
 }
 ul li{

@@ -3,7 +3,7 @@
         <!--menu ends here-->
         <div class="main-content">
             <div class="wrapper">
-                    <h1>Manage admin</h1>
+                    <h1>Manage Admin</h1>
                     <!-- Button to add Admin-->
                     <?php 
 
