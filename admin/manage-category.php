@@ -79,8 +79,8 @@ if(isset($_SESSION['failed-to-remove'])){
                                     <td><?php echo $featured; ?></td>
                                     <td><?php echo $active; ?></td>
                                     <td>
-                                    <a href="<?php echo SITE_URL;?>admin/update-category.php? id=<?php echo $id;?>" class="btn-secondary-category" >Update Category</a>
-                                    <a href=" <?php echo SITE_URL;?>admin/delete-category.php? id=<?php echo $id;?>&image_name=<?php echo $image_name;?> " class="btn-danger-category">Delete Category</a>
+                                    <a href="<?php echo SITE_URL;?>admin/update-category.php? id=<?php echo $id;?>" class="btn-secondary-delete-update" >Update Category</a>
+                                    <a href=" <?php echo SITE_URL;?>admin/delete-category.php? id=<?php echo $id;?>&image_name=<?php echo $image_name;?> " class="btn-danger-delete-update">Delete Category</a>
                                     </td>
                                     
                                     <?php

@@ -134,6 +134,7 @@
                                 if($current_image !=""){
                                 $remove_path ="../images/category/".$current_image;
                                 $remove = unlink($remove_path);
+                                
 
                                 //check whether the image is remove or not
                                 //if failed then display a message and stop the process
@@ -154,6 +155,7 @@
                         $image_name = $current_image;
                     }
                     //update the datbase
+                    
                     $sql2 = "UPDATE tbl_category SET
                         title = '$title',
                         image_name ='$image_name',

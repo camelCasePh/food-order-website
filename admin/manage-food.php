@@ -10,12 +10,25 @@
                     <br>
                     <a href="<?php echo SITE_URL;?>/admin/add-food.php" class="btn-primary">Add Food</a>
                     <br><br>
+                
                     <?php
                             if(isset($_SESSION['upload-food'])){
                                 echo $_SESSION['upload-food'];
                                 unset($_SESSION['upload-food']);   
                             }
-                        
+                            if(isset($_SESSION['delete-food'])){
+                                echo $_SESSION['delete-food'];
+                                unset($_SESSION['delete-food']);   
+                            }
+                            if(isset($_SESSION['delete-food-image'])){
+                                echo $_SESSION['delete-food-image'];
+                                unset($_SESSION['delete-food-image']);
+                            }
+                            if(isset($_SESSION['unauthorize'])){
+                                echo $_SESSION['unauthorize'];
+                                unset($_SESSION['unauthorize']);
+                            }
+                           
                      ?>
         <br><br>
 
@@ -32,7 +45,7 @@
 
                         <?php 
                                 //create a sql query to get all the food from the database
-                                $sql = "SELECT * FROM tbl_food WHERE active='Yes'";
+                                $sql = "SELECT * FROM tbl_food";
                                 //Execute the query
                                 $res = mysqli_query($conn, $sql);
 
@@ -75,9 +88,10 @@
                                             <td><?php echo $featured; ?></td>
                                             <td><?php echo $active; ?></td>
                                             <td>
-                                            <a href="#" class="btn-secondary">Update Admin</a>
-                                            <a href="#" class="btn-danger">Delete Admin</a>
+                                            <a href="<?php echo SITE_URL;?>admin/update-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>" class="btn-secondary-delete-update">Update Food</a>
+                                            <a href="<?php echo SITE_URL;?>admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>" class="btn-danger-delete-update">Delete Food</a>
                                             </td>
+
                                         </tr>
                                             <?php
 
