@@ -16,6 +16,14 @@
                                 echo $_SESSION['upload-food'];
                                 unset($_SESSION['upload-food']);   
                             }
+                            if(isset($_SESSION['update-food'])){
+                                echo $_SESSION['update-food'];
+                                unset($_SESSION['update-food']);   
+                            }
+                            if(isset($_SESSION['upload-food-image'])){
+                                echo $_SESSION['upload-food-image'];
+                                unset($_SESSION['upload-food-image']);   
+                            }
                             if(isset($_SESSION['delete-food'])){
                                 echo $_SESSION['delete-food'];
                                 unset($_SESSION['delete-food']);   
@@ -77,7 +85,7 @@
                                                 if($image_name!=""){
                                                     
                                                     ?>
-                                                    <img src="<?php echo SITE_URL; ?>images/food/<?php echo $image_name;?>"width="100px">
+                                                    <img src="<?php echo SITE_URL; ?>images/food/<?php echo $image_name;?>"width="150px">
                                                     <?php
                                                 }else{
                                                     echo "<div class='failed'> Image not Added.</div>";

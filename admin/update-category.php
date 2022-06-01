@@ -54,7 +54,7 @@
 
                                         //display the image
                                         ?>
-                                            <img src="<?php echo SITE_URL;?>images/category/<?php echo $current_image; ?>" width = "100px">
+                                            <img src="<?php echo SITE_URL;?>images/category/<?php echo $current_image; ?>" width = "150px">
                                         <?php
                                     }else{
                                             echo "<div class='failed'>Image not Added.</div>";
@@ -150,7 +150,8 @@
                                 $image_name = $current_image;
                             }
 
-                    }else{
+                    }
+                    else{
 
                         $image_name = $current_image;
                     }

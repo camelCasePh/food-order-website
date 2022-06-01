@@ -68,7 +68,7 @@ if(isset($_SESSION['failed-to-remove'])){
                                     if($image_name!=""){
                                         
                                         ?>
-                                        <img src="<?php echo SITE_URL; ?>images/category/<?php echo $image_name;?>"width="100px">
+                                        <img src="<?php echo SITE_URL; ?>images/category/<?php echo $image_name;?>"width="150px">
                                         <?php
                                     }else{
                                        // echo "<div class='failed'> Image not Added.</div>";
