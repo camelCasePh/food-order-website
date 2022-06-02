@@ -90,6 +90,7 @@
 
                                 if($count >0){
 
+                                     
                                     //category is available
                                     while($rows= mysqli_fetch_assoc($res)){
 
@@ -99,8 +100,8 @@
                                         ?>
                                         <option <?php if($current_category == $category_id){ echo "selected";}?> value="<?php echo $category_id;?>"><?php echo $category_title;?></option>
                                         <?php
-                                     
-                                      
+                                        
+                                   
                                     }
                                 }else{
                                     //category is not available
@@ -118,15 +119,15 @@
                     <tr>
                         <td>Featured:</td>
                         <td>
-                            <input <?php if($featured == "Yes"){ echo "checked";}?> type="radio" name="featured" value="Yes"> Yes
-                            <input <?php if($featured == "No"){ echo "checked";}?> type="radio" name="featured" value="No"> No
+                        <input <?php if($featured =="Yes"){echo"checked";}?> type="radio" name="featured" value="Yes">Yes
+                            <input <?php if($featured =="No"){echo"checked";}?> type="radio" name="featured" value="No">No
                         </td>
                     </tr>
                     <tr>
                         <td>Active:</td>
                         <td>
-                            <input <?php if($active == "Yes"){ echo "checked";}?> type="radio" name="active" value="Yes"> Yes
-                            <input <?php if($active == "No"){ echo "checked";}?> type="radio" name="active" value="No"> No
+                        <input <?php if($active=="Yes"){echo"checked";}?> type="radio" name="active" value="Yes">Yes
+                            <input <?php if($active=="No"){echo"checked";}?>  type="radio" name="active" value="No">No
                         </td>
                     </tr>
                     <tr>
@@ -183,9 +184,9 @@
                                             //failed to upload
 
                                             //print session message
-                                            $_SESSION['upload-food-image'] = "<div class='failed'>Failed to upload the image.</div>";
+                                         //   $_SESSION['upload-food-image'] = "<div class='failed'>Failed to upload the image.</div>";
                                             //redirect to manage food
-                                            header('location:'.SITE_URL.'admin/manage-food.php');
+                                         //   header('location:'.SITE_URL.'admin/manage-food.php');
                                             //stop the process
                                             die();
                                         }
@@ -195,20 +196,22 @@
                                         if($current_image !=""){
                                             //Current image is available
                                             //remove the image
-                                            $remo_path = "../images/food/".$current_image;
+                                            $remove_path = "../images/food/".$current_image;
                                             $remove = unlink($remove_path);
 
                                             //check whether the image is remove or not
                                             if($remove == false){
                                                 //failed to removecurrent image
-                                                $_SESSION['delete-food-image'] = "<div class='failed'>Failed to Remove Current image.</div>";
+                                              //  $_SESSION['delete-food-image'] = "<div class='failed'>Failed to Remove Current image.</div>";
                                                 //redirect to manage food
-                                                    header('location:'.SITE_URL.'admin/manage-food.php');
+                                                 //   header('location:'.SITE_URL.'admin/manage-food.php');
                                                 //stop the process
                                                 die();
                                             }
                                         }
 
+                                    }else{
+                                        $image_name = $current_image;
                                     }
                             }else{
                                 //button is not clicked
@@ -223,7 +226,7 @@
                                 description = '$description',
                                 price = $price,
                                 image_name ='$image_name',
-                                category_id = '$category',
+                                category_id = $category,
                                 featured = '$featured',
                                 active = '$active'
                                 WHERE id=$id
@@ -232,18 +235,18 @@
                             //Execute the query
                             $res3 = mysqli_query($conn, $sql3);
                             //check whether the wuery is executed or not
-                            if($res3 == true){
+                          if($res3 == true){
                                 //query executed and food updated
                                 
-                                $_SESSION['update-food'] = "<div class='success'>Food updated successfully.</div>";
-                               header('location:'.SITE_URL.'admin/manage-food.php');
+                               $_SESSION['update-foods'] = "<div class='success'>Food updated successfully.</div>";
+                                       header('location:'.SITE_URL.'admin/manage-food.php');
 
 
-                            }else{
+                         }else{
                                 //query is not executed
-                                $_SESSION['update-food'] = "<div class='failed'>Failed to update food.</div>";
+                                $_SESSION['update-foods'] = "<div class='failed'>Failed to update food.</div>";
                                 header('location:'.SITE_URL.'admin/manage-food.php');
-                            }
+                         }
 
                     //5. redirect to manage food with session message
 

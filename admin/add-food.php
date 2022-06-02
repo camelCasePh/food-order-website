@@ -144,7 +144,8 @@
 
                                             //rename the image
                                                 //get the extension of the selected image
-                                                $ext = end(explode('.',$image_name));
+                                                $ext_tmp =explode('.',$image_name);
+                                                $ext = end($ext_tmp);
                                                 //create  new name for image
 
                                                 $image_name="Food-Name-".rand(0000,9999).".".$ext;

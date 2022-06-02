@@ -16,9 +16,9 @@
                                 echo $_SESSION['upload-food'];
                                 unset($_SESSION['upload-food']);   
                             }
-                            if(isset($_SESSION['update-food'])){
-                                echo $_SESSION['update-food'];
-                                unset($_SESSION['update-food']);   
+                            if(isset($_SESSION['update-foods'])){
+                                echo $_SESSION['update-foods'];
+                                unset($_SESSION['update-foods']);   
                             }
                             if(isset($_SESSION['upload-food-image'])){
                                 echo $_SESSION['upload-food-image'];

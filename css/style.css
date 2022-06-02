@@ -158,10 +158,19 @@ fieldset{
     margin-left: 8%;
     color:white;
 }
-
+h4{
+    color: black;
+}
+.food-menu-desc h4{
+    color: black;
+}
+.food-menu-desc .food-price {
+    color: black;
+}
 .food-price{
     font-size: 1.2rem;
     margin: 2% 0;
+    color: black;
 }
 .food-detail{
     font-size: 1rem;
