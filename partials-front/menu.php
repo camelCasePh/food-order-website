@@ -11,6 +11,7 @@
 
     <!-- Link our CSS file -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/612e1c7b76.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -36,6 +37,10 @@
                     </li>
                     <li>
                         <a href="#">Contact</a>
+                    </li>
+                    <li>
+                        
+                        <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
             </div>

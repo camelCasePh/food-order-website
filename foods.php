@@ -46,7 +46,7 @@
 
                                         <div class="food-menu-desc">
                                             <h4><?php echo $food_title;?></h4>
-                                            <p class="food-price"><?php echo $food_price;?> PHP</p>
+                                            <p class="food-price">₱ <?php echo $food_price;?></p>
                                             <p class="food-detail">
                                                      <?php echo $food_description;?>
                                             </p>
