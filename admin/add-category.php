@@ -66,7 +66,7 @@
     
 
         // Get the value from category form
-        $title = $_POST['title'];
+        $title = mysqli_real_escape_string($conn,$_POST['title']);
 
          //check whether the image is selected or not and set the value for the image
         //  print_r($_FILES['image']);

@@ -121,15 +121,15 @@
                        //get all the data from the form
 
                        $id = $_POST['id'];
-                       $food = $_POST['food'];
+                       $food = mysqli_real_escape_string($conn,$_POST['food']);
                        $price = $_POST['price'];
                        $qty = $_POST['qty'];
                        $total = $price*$qty;
                        $status = $_POST['status'];
-                       $customer_name = $_POST['customer_name'];
-                       $customer_contact = $_POST['customer_contact'];
-                       $customer_email = $_POST['customer_email'];
-                       $customer_address = $_POST['customer_address'];
+                       $customer_name = mysqli_real_escape_string($conn,$_POST['customer_name']);
+                       $customer_contact = mysqli_real_escape_string($conn,$_POST['customer_contact']);
+                       $customer_email = mysqli_real_escape_string($conn,$_POST['customer_email']);
+                       $customer_address = mysqli_real_escape_string($conn,$_POST['customer_address']);
 
                        //update the current data in the tbl_order database
                        //sql query to store updated data to the database

@@ -152,6 +152,28 @@ fieldset{
     background-color: #ececec;
     padding: 4% 0;
 }
+.cardview{
+    width: 60%;
+    background-color: #b71540;
+    color: white;
+    height: 100px;
+    text-align:  center;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.cardview h5{
+
+    margin-top: 30px;
+    font-size: larger;
+
+}
+#hhb-team{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: larger;
+}
 .food-menu-box{
     width: 43%;
     margin: 1%;

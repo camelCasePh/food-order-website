@@ -82,17 +82,17 @@
                 //check whether submit button is clicked or not
                 if(isset($_POST['submit'])){
                    
-                        $food = $_POST['food'];
+                        $food = mysqli_real_escape_string($conn,$_POST['food']);
                         $price = $_POST['price'];
                         $qty = $_POST['qty'];
 
                         $total = $price*$qty;
                         $order_date = date("Y-m-d h:i:sa");
                         $status = "Ordered"; //ordered, on-delivery, delivered, Cancelled
-                        $customer_name = $_POST['fullname'];
-                        $customer_contact = $_POST['contact'];
-                        $customer_email = $_POST['email'];
-                        $customer_address = $_POST['address'];
+                        $customer_name = mysqli_real_escape_string($conn,$_POST['fullname']);
+                        $customer_contact = mysqli_real_escape_string($conn,$_POST['contact']);
+                        $customer_email = mysqli_real_escape_string($conn,$_POST['email']);
+                        $customer_address = mysqli_real_escape_string($conn, $_POST['address']);
 
                         //save the order to the database
 
